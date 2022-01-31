@@ -3,7 +3,7 @@ package com.company;
 -реализовать enum класс состоящий из типов пользователей приложения (ADMIN, PREMIUM, AUTHORIZED, GUEST)
 -добавить int параметр в enum описывающий приоритетность обслуживания этого пользователя (0, 1, 2, 3);
 */
-public enum UserType {
+public enum UserTypes {
     ADMIN(0),
     PREMIUM(1),
     AUTHORIZED(2),
@@ -11,7 +11,7 @@ public enum UserType {
 
     private int priority;
 
-    UserType(int priority) {
+    UserTypes(int priority) {
         this.priority = priority;
     }
 
@@ -19,7 +19,7 @@ public enum UserType {
         return priority;
     }
 
-    public void setPriority(int priority) { // не нужен. не можем менять?
+    public void setPriority(int priority) {
         this.priority = priority;
     }
 

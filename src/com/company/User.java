@@ -4,7 +4,7 @@ package com.company;
 public class User { //Ctrl+Alt+F7 - кто использует класс
     private String login; // видимость в пределах package
     private String password;
-    private UserType type;
+    private UserTypes type;
 
     private boolean setLogin(String login) {
         if (login == null) {return false;}
@@ -12,7 +12,7 @@ public class User { //Ctrl+Alt+F7 - кто использует класс
             return true;}
     }
 
-    public User(String login, String password, UserType type) {
+    public User(String login, String password, UserTypes type) {
         this.login = login;
         this.password = password;
         this.type = type;
@@ -33,7 +33,7 @@ public class User { //Ctrl+Alt+F7 - кто использует класс
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof User)) return false;
-        User that = (User) obj; //? зачем преобразование если уже есть проверка юзер=инстанс обж
+        User that = (User) obj;
         if
                 (this.login.equals(that.login)&&
                 this.password.equals(that.password)&&

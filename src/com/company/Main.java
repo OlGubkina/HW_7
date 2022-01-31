@@ -1,28 +1,26 @@
 package com.company;
 
-// import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        User user1 = new User("Alex123", "parol", UserType.ADMIN);
+        User user1 = new User("Alex123", "parol", UserTypes.ADMIN);
         //Same user
         //User user2 = new User("Alex123", "parol", UserType.ADMIN);
-        User user2 = new User("Pashka999", "passs", UserType.PREMIUM);
+        User user2 = new User("Pashka999", "passs", UserTypes.PREMIUM);
 
-        System.out.println(user1.toString());
-        System.out.println(user2.toString());
+        System.out.println(user1);
+        System.out.println(user2);
         System.out.println("Hash of user user1 = " + user1.hashCode());
         System.out.println("Hash of user user2 = " + user2.hashCode());
         compareObjects(user1, user2);
 
         System.out.println("Possible user types:");
-        UserType [] arrTypes = UserType.values();
+        UserTypes[] arrTypes = UserTypes.values();
         System.out.println(Arrays.toString(arrTypes));
 
-        System.out.println("Приоритет пользователя " + UserType.ADMIN.toString() + " = " + UserType.ADMIN.getPriority());
+        System.out.println("Приоритет пользователя " + UserTypes.ADMIN.toString() + " = " + UserTypes.ADMIN.getPriority());
 }
 
     private static void compareObjects(User one, User two) {
